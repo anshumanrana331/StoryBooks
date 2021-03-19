@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const { ensureAuth } = require('../middleware/auth');
+const express = require('express')
+const router = express.Router()
+const { ensureAuth } = require('../middleware/auth')
 
-const Story = require('../models/Story');
+const Story = require('../models/Story')
 
 // @desc    Show add page
 // @route   GET /stories/add
@@ -157,4 +157,4 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
   }
 })
 
-module.exports = router;
+module.exports = router

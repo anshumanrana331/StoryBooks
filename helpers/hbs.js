@@ -1,8 +1,8 @@
-const moment = require('moment');
+const moment = require('moment')
 
 module.exports = {
   formatDate: function (date, format) {
-    return moment(date).local().format(format);     //use utc instead of local for utc timings
+    return moment(date).local().format(format)
   },
   truncate: function (str, len) {
     if (str.length > len && str.length > 0) {
@@ -15,7 +15,7 @@ module.exports = {
     return str
   },
   stripTags: function (input) {
-    return input.replace(/<(?:.|\n)*?>/gm, '')    //replaces any html tag with nothing
+    return input.replace(/<(?:.|\n)*?>/gm, '')
   },
   editIcon: function (storyUser, loggedUser, storyId, floating = true) {
     if (storyUser._id.toString() == loggedUser._id.toString()) {
